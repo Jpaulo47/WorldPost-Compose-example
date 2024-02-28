@@ -1,4 +1,4 @@
-package com.joaorodrigues.theworldpost.data
+package com.joaorodrigues.theworldpost.data.manger
 
 import android.content.Context
 import androidx.datastore.core.DataStore

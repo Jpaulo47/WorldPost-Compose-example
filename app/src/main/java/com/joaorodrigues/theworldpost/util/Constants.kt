@@ -5,4 +5,6 @@ object Constants {
     const val USER_SETTINGS = "userSettings"
 
     const val APP_ENTRY = "appEntry"
+
+    const val API_KEY = "17cddc16f2c147768ab73d1148e675f0"
 }
