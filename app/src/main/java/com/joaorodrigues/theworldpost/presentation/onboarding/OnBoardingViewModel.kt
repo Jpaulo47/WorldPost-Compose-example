@@ -2,7 +2,7 @@ package com.joaorodrigues.theworldpost.presentation.onboarding
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.joaorodrigues.theworldpost.domain.usecases.AppEntryUseCases
+import com.joaorodrigues.theworldpost.domain.usecases.appentry.AppEntryUseCases
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

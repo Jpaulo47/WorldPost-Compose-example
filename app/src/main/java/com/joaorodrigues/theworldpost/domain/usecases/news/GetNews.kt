@@ -1,4 +1,4 @@
-package com.joaorodrigues.theworldpost.domain.usecases
+package com.joaorodrigues.theworldpost.domain.usecases.news
 
 import androidx.paging.PagingData
 import com.joaorodrigues.theworldpost.domain.model.Article

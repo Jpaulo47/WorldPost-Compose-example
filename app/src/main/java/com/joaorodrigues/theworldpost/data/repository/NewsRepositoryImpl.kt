@@ -9,6 +9,11 @@ import com.joaorodrigues.theworldpost.domain.model.Article
 import com.joaorodrigues.theworldpost.domain.repository.NewsRepository
 import kotlinx.coroutines.flow.Flow
 
+/**
+ * Implements [NewsRepository], which is the interface for interacting with news data sources.
+ * Uses a Jetpack Pager object to create a paginated data stream.
+ * The getNews() method returns a [PagingData] flow of articles.
+ */
 class NewsRepositoryImpl(
     private val newsApi: NewsApi
 ): NewsRepository {

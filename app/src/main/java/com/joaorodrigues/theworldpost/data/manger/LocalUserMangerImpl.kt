@@ -11,8 +11,14 @@ import com.joaorodrigues.theworldpost.util.Constants
 import com.joaorodrigues.theworldpost.util.Constants.USER_SETTINGS
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
-
+/**
+This class is responsible for managing local data related to the user.
+Uses DataStore, a Jetpack library, to store and retrieve application preferences asynchronously.
+saveAppEntry() saves an application entry to the DataStore.
+readAppEntry() retrieves application entry from the DataStore as a stream of booleans.
+ */
 class LocalUserMangerImpl(private val context: Context): LocalUserManager {
+
     override suspend fun saveAppEntry() {
         context.dataStore.edit { settings ->
             settings[PreferencesKeys.APP_ENTRY] = true

@@ -3,7 +3,12 @@ package com.joaorodrigues.theworldpost.data.remote
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.joaorodrigues.theworldpost.domain.model.Article
-
+/**
+Implements [PagingSource], a Jetpack class for loading paginated data.
+Uses [NewsApi] to load news API data in a paginated form.
+Keeps track of the total number of news stories uploaded.
+Overrides the load() and getRefreshKey() methods.
+ */
 class NewsPagingSource(
     private val newsApi: NewsApi,
     private val sources: String

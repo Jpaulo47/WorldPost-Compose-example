@@ -1,4 +1,4 @@
-package com.joaorodrigues.theworldpost.domain.usecases
+package com.joaorodrigues.theworldpost.domain.usecases.appentry
 
 import com.joaorodrigues.theworldpost.domain.manger.LocalUserManager
 
