@@ -11,6 +11,7 @@ import com.joaorodrigues.theworldpost.domain.usecases.appentry.ReadAppEntry
 import com.joaorodrigues.theworldpost.domain.usecases.appentry.SaveAppEntry
 import com.joaorodrigues.theworldpost.domain.usecases.news.GetNews
 import com.joaorodrigues.theworldpost.domain.usecases.news.NewsUseCases
+import com.joaorodrigues.theworldpost.domain.usecases.news.SearchNews
 import com.joaorodrigues.theworldpost.util.Constants.BASE_URL
 import dagger.Module
 import dagger.Provides
@@ -61,7 +62,8 @@ object AppModule {
         newsRepository: NewsRepository
     ): NewsUseCases {
         return NewsUseCases(
-            getNews = GetNews(newsRepository)
+            getNews = GetNews(newsRepository),
+            searchNews = SearchNews(newsRepository)
         )
     }
 

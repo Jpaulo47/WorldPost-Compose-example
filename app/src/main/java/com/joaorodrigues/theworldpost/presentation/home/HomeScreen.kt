@@ -81,7 +81,6 @@ fun HomeScreen(articles: LazyPagingItems<Article>, navigate:(String) -> Unit) {
         Text(
             text = titles, modifier = Modifier
                 .fillMaxWidth()
-                .padding(start = MediumPadding1)
                 .basicMarquee(), fontSize = 12.sp,
             color = colorResource(id = R.color.placeholder)
         )

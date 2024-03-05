@@ -58,7 +58,7 @@ fun ArticleCard(
         Column(
             verticalArrangement = Arrangement.SpaceAround,
             modifier = Modifier
-                .padding(horizontal = ExtraSmallPadding)
+                .padding(horizontal = SmallIconSize)
                 .height(ArticleCardSize)
 
         ) {
