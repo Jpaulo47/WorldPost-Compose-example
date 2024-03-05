@@ -1,5 +1,6 @@
 package com.joaorodrigues.theworldpost.presentation.home
 
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
@@ -9,7 +10,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel @Inject constructor(
-    private val newsUseCases: NewsUseCases
+    newsUseCases: NewsUseCases
 ) : ViewModel() {
 
     val news = newsUseCases.getNews(

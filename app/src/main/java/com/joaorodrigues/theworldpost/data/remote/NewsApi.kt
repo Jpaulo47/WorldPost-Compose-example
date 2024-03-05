@@ -2,6 +2,7 @@ package com.joaorodrigues.theworldpost.data.remote
 
 import com.joaorodrigues.theworldpost.data.remote.dto.NewsResponse
 import com.joaorodrigues.theworldpost.util.Constants.API_KEY
+import retrofit2.http.GET
 import retrofit2.http.Query
 
 /**
@@ -10,6 +11,7 @@ import retrofit2.http.Query
  * This method returns a [NewsResponse] object.
  */
 interface NewsApi {
+    @GET("top-headlines")
     suspend fun getNews(
         @Query("pages") pages: Int,
         @Query("sources") sources: String,
