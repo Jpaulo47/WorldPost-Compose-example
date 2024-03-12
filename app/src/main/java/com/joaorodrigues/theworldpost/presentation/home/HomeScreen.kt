@@ -27,12 +27,15 @@ import com.joaorodrigues.theworldpost.domain.model.Article
 import com.joaorodrigues.theworldpost.presentation.Dimens.MediumPadding1
 import com.joaorodrigues.theworldpost.presentation.common.ArticlesList
 import com.joaorodrigues.theworldpost.presentation.common.SearchBar
-import com.joaorodrigues.theworldpost.presentation.nvgraph.Route
 
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun HomeScreen(articles: LazyPagingItems<Article>, navigate:(String) -> Unit) {
+fun HomeScreen(
+    articles: LazyPagingItems<Article>,
+    navigateToSearch: () -> Unit,
+    navigateToDetails: (Article) -> Unit
+) {
 
     val titles by remember {
         derivedStateOf {
@@ -71,9 +74,7 @@ fun HomeScreen(articles: LazyPagingItems<Article>, navigate:(String) -> Unit) {
             readOnly = true,
             onValueChange = {},
             onSearch = {},
-            onClick = {
-                navigate(Route.SearchScreen.route)
-            }
+            onClick = navigateToSearch
         )
 
         Spacer(modifier = Modifier.height(MediumPadding1))
@@ -90,7 +91,7 @@ fun HomeScreen(articles: LazyPagingItems<Article>, navigate:(String) -> Unit) {
         ArticlesList(
             modifier = Modifier.padding(horizontal = MediumPadding1),
             articles = articles,
-            onClick = { navigate(Route.DetailScreen.route) }
+            onClick = navigateToDetails
         )
     }
 }

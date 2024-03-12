@@ -3,12 +3,14 @@ package com.joaorodrigues.theworldpost.data.repository
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
+import com.joaorodrigues.theworldpost.data.local.NewsDao
 import com.joaorodrigues.theworldpost.data.remote.NewsApi
 import com.joaorodrigues.theworldpost.data.remote.NewsPagingSource
 import com.joaorodrigues.theworldpost.data.remote.SearchNewsPagingSource
 import com.joaorodrigues.theworldpost.domain.model.Article
 import com.joaorodrigues.theworldpost.domain.repository.NewsRepository
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.onEach
 
 /**
  * Implements [NewsRepository], which is the interface for interacting with news data sources.
@@ -16,7 +18,8 @@ import kotlinx.coroutines.flow.Flow
  * The getNews() method returns a [PagingData] flow of articles.
  */
 class NewsRepositoryImpl(
-    private val newsApi: NewsApi
+    private val newsApi: NewsApi,
+    private val newsDao: NewsDao
 ): NewsRepository {
     override fun getNews(sources: List<String>): Flow<PagingData<Article>> {
         return Pager(
@@ -41,5 +44,21 @@ class NewsRepositoryImpl(
                 )
             }
         ).flow
+    }
+
+    override suspend fun upsertArticle(article: Article) {
+        newsDao.upsert(article)
+    }
+
+    override suspend fun deleteArticle(article: Article) {
+        newsDao.delete(article)
+    }
+
+    override fun selectArticle(): Flow<List<Article>> {
+        return newsDao.getArticles()
+    }
+
+    override suspend fun selectArticle(url: String): Article? {
+        return newsDao.getArticle(url)
     }
 }
