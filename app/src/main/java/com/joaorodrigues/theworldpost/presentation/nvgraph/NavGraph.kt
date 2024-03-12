@@ -6,8 +6,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
 import androidx.navigation.compose.rememberNavController
-import com.joaorodrigues.theworldpost.presentation.bookmark.BookmarkScreen
-import com.joaorodrigues.theworldpost.presentation.bookmark.BookmarkViewModel
 import com.joaorodrigues.theworldpost.presentation.news_navigator.NewsNavigator
 import com.joaorodrigues.theworldpost.presentation.onboarding.OnBoardingScreen
 import com.joaorodrigues.theworldpost.presentation.onboarding.OnBoardingViewModel

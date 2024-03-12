@@ -1,6 +1,5 @@
 package com.joaorodrigues.theworldpost.domain.usecases.news
 
-import com.joaorodrigues.theworldpost.data.local.NewsDao
 import com.joaorodrigues.theworldpost.domain.model.Article
 import com.joaorodrigues.theworldpost.domain.repository.NewsRepository
 import javax.inject.Inject

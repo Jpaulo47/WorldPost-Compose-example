@@ -30,7 +30,6 @@ import com.joaorodrigues.theworldpost.R
 import com.joaorodrigues.theworldpost.domain.model.Article
 import com.joaorodrigues.theworldpost.domain.model.Source
 import com.joaorodrigues.theworldpost.presentation.Dimens.ArticleCardSize
-import com.joaorodrigues.theworldpost.presentation.Dimens.ExtraSmallPadding
 import com.joaorodrigues.theworldpost.presentation.Dimens.ExtraSmallPadding2
 import com.joaorodrigues.theworldpost.presentation.Dimens.SmallIconSize
 import com.joaorodrigues.theworldpost.ui.theme.NewsAppTheme

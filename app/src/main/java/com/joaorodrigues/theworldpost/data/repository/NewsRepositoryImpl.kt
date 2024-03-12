@@ -10,7 +10,6 @@ import com.joaorodrigues.theworldpost.data.remote.SearchNewsPagingSource
 import com.joaorodrigues.theworldpost.domain.model.Article
 import com.joaorodrigues.theworldpost.domain.repository.NewsRepository
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.onEach
 
 /**
  * Implements [NewsRepository], which is the interface for interacting with news data sources.

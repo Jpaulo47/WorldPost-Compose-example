@@ -96,7 +96,7 @@ fun NewsNavigator() {
             startDestination = Route.HomeScreen.route,
             modifier = Modifier.padding(bottom = bottomPadding)
         ) {
-            composable(route = Route.HomeScreen.route) { backStackEntry ->
+            composable(route = Route.HomeScreen.route) {
                 val viewModel: HomeViewModel = hiltViewModel()
                 val articles = viewModel.news.collectAsLazyPagingItems()
                 HomeScreen(
@@ -173,8 +173,8 @@ fun OnBackClickStateSaver(navController: NavController) {
 
 private fun navigateToTab(navController: NavController, route: String) {
     navController.navigate(route) {
-        navController.graph.startDestinationRoute?.let { screen_route ->
-            popUpTo(screen_route) {
+        navController.graph.startDestinationRoute?.let { route ->
+            popUpTo(route) {
                 saveState = true
             }
         }

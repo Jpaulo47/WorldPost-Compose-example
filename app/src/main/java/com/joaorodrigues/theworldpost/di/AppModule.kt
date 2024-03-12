@@ -20,7 +20,6 @@ import com.joaorodrigues.theworldpost.domain.usecases.news.SearchNews
 import com.joaorodrigues.theworldpost.domain.usecases.news.SelectArticle
 import com.joaorodrigues.theworldpost.domain.usecases.news.SelectArticles
 import com.joaorodrigues.theworldpost.domain.usecases.news.UpsertArticle
-import com.joaorodrigues.theworldpost.util.Constants
 import com.joaorodrigues.theworldpost.util.Constants.BASE_URL
 import com.joaorodrigues.theworldpost.util.Constants.NEWS_DATABASE_NAME
 import dagger.Module
