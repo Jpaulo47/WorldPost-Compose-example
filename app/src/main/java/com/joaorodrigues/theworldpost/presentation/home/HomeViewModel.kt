@@ -1,6 +1,5 @@
 package com.joaorodrigues.theworldpost.presentation.home
 
-import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
