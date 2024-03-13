@@ -5,8 +5,10 @@ An application that consumes a News API and displays it in a list format, allowi
 - Clean Architecture
 - MVVM & MVI
 - Jetpack Compose
-- Paging 3, Retrofit
-- Room, DataStore
+- Paging 3
+- Retrofit
+- Room
+- DataStore
 - Dagger Hilt
 - Navigation
 - Coil.
